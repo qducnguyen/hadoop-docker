@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
-#environment variables for changing JDK, HADOOP versions and directoris
-ENV JDK_VER=16.0.1
+#environment variables for changing JDK, HADOOP versions and directories
 ENV HADOOP_VER=3.3.1
 ENV JDK_TAR_NAME=jdk.tar.gz
 ENV HADOOP_TAR_NAME=hadoop.tar.gz
@@ -26,7 +25,7 @@ ENV JAVA_HOME=/opt/java-se-8u41-ri
 
 ENV PATH=$PATH:$JAVA_HOME:$JAVA_HOME/bin
 #TESTIGN
-#RUN java --version
+RUN java -version
 
 #***setup hadoop***#
 ADD ./assets/${HADOOP_TAR_NAME} .
@@ -36,8 +35,9 @@ ENV HADOOP_HOME=/opt/hadoop-${HADOOP_VER}
 ENV HADOOP_STREAMING_JAR=$HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar
 ENV PATH=$PATH:$HADOOP_HOME
 ENV PATH=$PATH:$HADOOP_HOME/bin
+ENV PATH=$PATH:$HADOOP_HOME/sbin
 #after this all binaries are availabes ash shell comand, which means you can directly use 
-#$hdfs or $hadoop instad of /opt/hadoop-3.3.1/bin/hdfs or /opt/hadoop-3.3.1/bin/hadoop
+#$hdfs or $hadoop instead of /opt/hadoop-3.3.1/bin/hdfs or /opt/hadoop-3.3.1/bin/hadoop
 
 #***CONFIGURATION***#
 #adding hadoop configuration files

@@ -8,7 +8,8 @@ This is a very simple setup for Hadoop cluster using docker. Explanation for eve
 
 ## Structure:
 There are four major parts of this setup, 
-- **Assets** : This folder contains binaries for Hadoop and Java. Please download JDK 8.0 binaries and hadoop 3.3.1 binaries and rename them to hadoop.tar.gz and jdk.tar.gz and put them under folder 'assets' for it to work properly
+- **Assets** : This folder contains binaries for Hadoop and Java. Please download JDK 8.0 binaries and hadoop 3.3.1 binaries and rename them to hadoop.tar.gz and jdk.tar.gz and put them under folder 'assets' for it to work properly.
+- **Data**: This folder contains arbitrary large dataset to test.
 - **Hadoop Base image** : This image contains configurations and setup of Hadoop and Java.
 - **Name Node** : This is located under /hdfs/namenode and extends to Hadoop Base Image. All configurations and assets required for this are located under same folder.
 - **Data Node**: Located under /hdfs/datanode. Mostly is same is same as Namenode just needs to start a different process thus it extends to Namenode instead of directly extending to Hadoop Base Image.
@@ -27,10 +28,6 @@ All instructions can be found in **/Dockerfile**.
 > NOTE: it is necessary that all containers starting should be under same network. By default they run under *dock_net*
 
 **scripts** foder contains some handy scripts that could be used when experimenting with the cluster.
-
-- **cleanup**: this script will remove all running and dangling containers
-
-- **build**: this script could be used to build the base image for hadoop. Scripts for building NameNode and DataNode can be found in their individual folder.
 
 # HDFS:
 This folder contains images for NameNode and DataNode that together forms HDFS or Hadoop Distributed File System.

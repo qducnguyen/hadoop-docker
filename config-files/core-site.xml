@@ -25,9 +25,7 @@
   <description>
     hdfs://host:port
     URI of namenode. need for datanodes to connect to namenode.
-    hostname is required, IP won't work, spent 3hrs before figuring this out.
-    ADD SAME HOST AS THE MACHINE WHERE YOU ARE RUNNING YOUR NAMENODE
-    DEFAULT PORT IS 8020
+    hostname is required, IP won't work.
   </description>
 </property>
 </configuration>
