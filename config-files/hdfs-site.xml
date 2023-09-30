@@ -19,15 +19,11 @@
 <configuration>
   <property>
     <name>dfs.namenode.name.dir</name>
-    <value>/opt/hdfs/namenode</value>
-  </property>
-  <property>
-    <name>dfs.namenode.handler.count</name>
-    <value>1</value>
+    <value>/opt/hdfs_data/namenode</value>
   </property>
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>/opt/hdfs/datanode</value>
+    <value>/opt/hdfs_data/datanode</value>
   </property>
   <property>
     <name>dfs.replication</name>

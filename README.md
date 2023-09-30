@@ -14,6 +14,8 @@ There are four major parts of this setup,
 - **Name Node** : This is located under /hdfs/namenode and extends to Hadoop Base Image. All configurations and assets required for this are located under same folder.
 - **Data Node**: Located under /hdfs/datanode. Mostly is same is same as Namenode just needs to start a different process thus it extends to Namenode instead of directly extending to Hadoop Base Image.
 
+*All assets and data are available in [this folder](https://husteduvn-my.sharepoint.com/:f:/g/personal/duc_nq204876_sis_hust_edu_vn/EmOBRWGhepBDpfrmdyeembkB7wLes_o4sd2QrdqAyYhqgQ?e=HWVkBh)*. Please download the right version for the ``assets`` folder.
+
 # Hadoop Base Image:
 This image lays the base for other images to be built on. First thing we need to do is install Hadoop and Java. I have provided Java 8 and Hadoop 3.3.1 but you can change it and rebuilt the image. All configurations related to YARN should be done here.
 All instructions can be found in **/Dockerfile**.

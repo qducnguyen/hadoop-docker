@@ -34,7 +34,7 @@
 # may want to provide OVERWRITING values on the command line.
 # For example:
 #
-JAVA_HOME=$JAVA_HOME
+# JAVA_HOME=$JAVA_HOME
 #
 # Therefore, the vast majority (BUT NOT ALL!) of these defaults
 # are configured for substitution and not append.  If append
@@ -51,8 +51,8 @@ JAVA_HOME=$JAVA_HOME
 
 # The java implementation to use. By default, this environment
 # variable is REQUIRED on ALL platforms except OS X!
-# export JAVA_HOME=/opt/jdk/jdk-16.0.1
-
+# export JAVA_HOME=$JAVA_HOME
+export JAVA_HOME=/opt/jdk1.8.0_202
 # Location of Hadoop.  By default, Hadoop will attempt to determine
 # this location based upon its execution path.
 # export HADOOP_HOME=
@@ -414,8 +414,11 @@ export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
 # It uses the format of (command)_(subcommand)_USER.
 #
 # For example, to limit who can execute the namenode command,
-# export HDFS_NAMENODE_USER=hdfs
-
+export HDFS_NAMENODE_USER=root
+export HDFS_DATANODE_USER=root
+export HDFS_SECONDARYNAMENODE_USER=root
+export YARN_RESOURCEMANAGER_USER=root
+export YARN_NODEMANAGER_USER=root
 
 ###
 # Registry DNS specific parameters

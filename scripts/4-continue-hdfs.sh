@@ -11,6 +11,6 @@ docker start datanode1
 #datanode 2
 docker start datanode2 
 
-#datanode for operating hadoop cluster(attached to current terminal)
-# docker run -it --net dock_net --name datanode_for_use datanode:latest /bin/bash
+#namenode for operating hadoop cluster(attached to current terminal)
+docker exec -it namenode bash
 

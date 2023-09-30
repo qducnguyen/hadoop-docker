@@ -19,9 +19,7 @@
 <configuration>
 <property>
 	<name>fs.defaultFS</name>
-  <!-- IF YOU CHANGE THIS HERE BE SURE TO CHANGE IT IN SCRIPTS WHERE YOU START DOCKER CONTAINER AND SPECIFY HOST -->
-  <!-- hdfs/namenode/run.sh -->
-	<value>hdfs://namenode-master:8020</value>
+	<value>hdfs://namenode-master:9000</value>
   <description>
     hdfs://host:port
     URI of namenode. need for datanodes to connect to namenode.
