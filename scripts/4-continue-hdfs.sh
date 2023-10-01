@@ -13,4 +13,5 @@ docker start datanode2
 
 #namenode for operating hadoop cluster(attached to current terminal)
 docker exec -it namenode bash
+# start-all.sh
 
