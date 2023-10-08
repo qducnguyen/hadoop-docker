@@ -17,13 +17,8 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-<property>
-	<name>fs.defaultFS</name>
-	<value>hdfs://namenode-master:9000</value>
-  <description>
-    hdfs://host:port
-    URI of namenode. need for datanodes to connect to namenode.
-    hostname is required, IP won't work.
-  </description>
-</property>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://namenode-master:9000</value>
+  </property>
 </configuration>
